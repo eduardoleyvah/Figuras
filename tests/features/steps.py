@@ -26,6 +26,10 @@ def dado_que_ingreso_los_numeros_group1_group2_y_group3(step, num1, num2, num3):
     world.cal = Figuras()
     world.cal.trapecio(int(num1), int(num2), int(num3))
 
+@step(u'entonces obtengo el resultado "([^"]*)"')
+def entonces_obtengo_el_resultado_group1(step, esperado):
+    assert int(esperado) == world.cal.obtener_resultado(),'El resultado esperado es ' +esperado+ ' y el obtenido es ' +str(world.cal.obtener_resultado())
+
 @step(u'entonces obtengo el area "([^"]*)"')
 def entonces_obtengo_el_resultado_group1(step, esperado):
     assert float(esperado) == world.cal.obtener_resultado(),'El resultado esperado es ' +esperado+ ' y el obtenido es ' +str(world.cal.obtener_resultado())
