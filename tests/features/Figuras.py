@@ -1,3 +1,4 @@
+import math
 class Figuras():
     def __init__(self):
         self.resultado = 0
