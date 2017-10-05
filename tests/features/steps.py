@@ -8,22 +8,22 @@ def cuando_realizo_la_operacion(step):
 
 @step(u'Dado que ingreso el radio "([^"]*)"')
 def dado_que_ingreso_el_numero_group1(step, num1):
-    world.cal = Calculadora()
+    world.cal = Figuras()
     world.cal.circulo(int(num1))
 
 @step(u'Dado que ingreso los lados "([^"]*)" y "([^"]*)"')
 def dado_que_ingreso_los_numeros_group1_y_group2(step, num1, num2):
-    world.cal = Calculadora()
+    world.cal = Figuras()
     world.cal.rectangulo(int(num1), int(num2))
 
 @step(u'Dado que ingreso el lado "([^"]*)"')
 def dado_que_ingreso_el_lado_group1(step, num1):
-    world.cal = Calculadora()
+    world.cal = Figuras()
     world.cal.cuadrado(int(num1))
 
 @step(u'Dado que ingreso los lados "([^"]*)", "([^"]*)" y "([^"]*)"')
 def dado_que_ingreso_los_numeros_group1_group2_y_group3(step, num1, num2, num3):
-    world.cal = Calculadora()
+    world.cal = Figuras()
     world.cal.trapecio(int(num1), int(num2), int(num3))
 
 @step(u'entonces obtengo el area "([^"]*)"')
